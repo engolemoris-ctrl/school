@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline School Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>School Management System (Offline)</h1>
+
+<!-- Student Section -->
+<section>
+  <h2>Students</h2>
+  <div class="form">
+    <input id="studentName" placeholder="Student Name">
+    <input id="studentClass" placeholder="Class">
+    <select id="studentLevel">
+      <option value="S.1">S.1</option>
+      <option value="S.2">S.2</option>
+      <option value="S.3">S.3</option>
+      <option value="S.4">S.4</option>
+      <option value="S.5">S.5</option>
+      <option value="S.6">S.6</option>
+    </select>
+    <button onclick="addStudent()">Add Student</button>
+  </div>
+  <h3>Student List</h3>
+  <ul id="studentList"></ul>
+</section>
+
+
+  <!-- Teacher Section -->
+  <section>
+    <h2>Teachers</h2>
+    <div class="form">
+      <input id="teacherName" placeholder="Teacher Name">
+      <input id="teacherSubject" placeholder="Subject">
+      <button onclick="addTeacher()">Add Teacher</button>
+    </div>
+    <ul id="teacherList"></ul>
+  </section>
+
+  <!-- Class Section -->
+  <section>
+    <h2>Classes</h2>
+    <div class="form">
+      <input id="className" placeholder="Class Name">
+      <input id="classTeacher" placeholder="Teacher Assigned">
+      <button onclick="addClass()">Add Class</button>
+    </div>
+    <ul id="classList"></ul>
+  </section>
+
+  <!-- Fees Section -->
+  <section>
+    <h2>Fees</h2>
+    <div class="form">
+      <input id="feeStudent" placeholder="Student Name">
+      <input id="feeAmount" placeholder="Amount">
+      <button onclick="addFee()">Add Fee</button>
+    </div>
+    <ul id="feeList"></ul>
+  </section>
+
+  <!-- Reports Section -->
+<section>
+  <h2>Reports</h2>
+  <button onclick="generateReport()">Generate Fee Report</button>
+  <button onclick="exportReport()">Export Report to CSV</button>
+  <button onclick="exportAllData()">Export All Data</button>
+  <div id="report"></div>
+</section>
+
+<!-- Dashboard Section -->
+<section>
+  <h2>Dashboard</h2>
+  <div id="dashboard"></div>
+</section>
+
+
+
+  <script src="app.js"></script>
+</body>
+</html>
